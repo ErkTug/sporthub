@@ -1,31 +1,30 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
-    <header className="bg-slate-900 text-white shadow-lg">
+    <header className="sticky top-0 z-50 bg-slate-900 text-white shadow-lg">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <h1 className="text-2xl font-bold text-emerald-400">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-emerald-400"
+        >
           ⚽ SportHub
-        </h1>
+        </Link>
 
-        <nav className="hidden gap-6 md:flex">
-          <a href="#" className="hover:text-emerald-400 transition-colors">
-            Haberler
-          </a>
+        <nav className="hidden items-center gap-6 md:flex">
+          <Link href="/">Ana Sayfa</Link>
 
-          <a href="#" className="hover:text-emerald-400 transition-colors">
-            Canlı Skor
-          </a>
+          <Link href="/live">Canlı Skor</Link>
 
-          <a href="#" className="hover:text-emerald-400 transition-colors">
-            Ligler
-          </a>
+          <Link href="/news">Haberler</Link>
 
-          <a href="#" className="hover:text-emerald-400 transition-colors">
-            Takımlar
-          </a>
+          <Link href="/leagues">Ligler</Link>
 
-          <a href="#" className="hover:text-emerald-400 transition-colors">
-            Giriş
-          </a>
+          <Link href="/teams">Takımlar</Link>
+
+          <button className="rounded-lg bg-emerald-500 px-4 py-2 font-semibold hover:bg-emerald-600">
+            Giriş Yap
+          </button>
         </nav>
       </div>
     </header>

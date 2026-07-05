@@ -3,6 +3,8 @@ import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
 import LiveMatches from "../components/home/LiveMatches";
 import NewsSection from "../components/home/NewsSection";
+import PopularLeagues from "../components/home/PopularLeagues";
+import TrendingNews from "../components/home/TrendingNews";
 
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
 
       <main className="min-h-screen bg-slate-100">
         <Hero />
+        <TrendingNews />
         <LiveMatches />
+        <PopularLeagues />
         <NewsSection />
       </main>
 

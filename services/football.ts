@@ -1,10 +1,4 @@
-export type Match = {
-  id: number;
-  homeTeam: string;
-  awayTeam: string;
-  score: string;
-  status: string;
-};
+import { Match } from "@/types/match";
 
 export async function getLiveMatches(): Promise<Match[]> {
   return [
@@ -12,15 +6,21 @@ export async function getLiveMatches(): Promise<Match[]> {
       id: 1,
       homeTeam: "Galatasaray",
       awayTeam: "Fenerbahçe",
-      score: "2 - 1",
+      homeScore: 2,
+      awayScore: 1,
       status: "75'",
+      league: "Trendyol Süper Lig",
+      kickoff: "20:00",
     },
     {
       id: 2,
       homeTeam: "Beşiktaş",
       awayTeam: "Trabzonspor",
-      score: "0 - 0",
+      homeScore: 1,
+      awayScore: 1,
       status: "Devre Arası",
+      league: "Trendyol Süper Lig",
+      kickoff: "19:00",
     },
   ];
 }
